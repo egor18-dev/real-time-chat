@@ -1,0 +1,100 @@
+.phone *{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+.chat{
+    display: flex;
+    flex-direction: column;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+
+        .phone{
+            width: 100%;
+            height: 60vh;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            padding: 20px;
+        
+            p{
+                width: fit-content;
+                padding: 10px !important;
+                color: #fff;
+                margin-top: 15px !important;
+            }
+        
+            .left{
+                border-radius: 15px;
+                border-top-left-radius: 0px;
+                background-color: #696D7B;
+            }
+        
+            .right{
+                border-radius: 15px;
+                border-top-right-radius: 0px;
+                background-color: #10297D;
+            }
+        
+            .right{
+                margin-left: auto !important;
+            }
+        }
+    
+        form{
+            width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        
+            input{
+                width: 70%;
+                padding: 7px;
+                border: 1px solid #eee;
+                outline: none;
+            }
+
+            button{
+                width: 20%;
+                background-color: #18191A;
+                color: #fff;
+            }
+        }
+    }
+
+    
+}
+
+@media (max-width: 1300px) {
+    .chat .content {
+        width: 40%; /* Ajusta el ancho al 90% del contenedor */
+    }
+}
+
+@media (max-width: 900px) {
+    .chat .content {
+        width: 55%; /* Ajusta el ancho al 90% del contenedor */
+    }
+}
+
+@media (max-width: 600px) {
+    .chat .content {
+        width: 70%; /* Ajusta el ancho al 90% del contenedor */
+    }
+}
+
+@media (max-width: 400px) {
+    .chat .content {
+        width: 90%; /* Ajusta el ancho al 90% del contenedor */
+    }
+}
