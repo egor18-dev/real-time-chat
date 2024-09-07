@@ -1,0 +1,21 @@
+<section>
+    <div class="form-box">
+      <div class="form-value">
+        <form [formGroup]="formGroup" (ngSubmit)="createAccount(formGroup.value)">
+          <h2>Entrar</h2>
+          <div class="inputbox">
+            <input type="username" id="username" formControlName="username" required>
+            <label for="username">Nom d'usuari</label>
+          </div>
+          <div class="inputbox">
+            <input type="password" id="password" formControlName="password" required>
+            <label for="password">Contrasenya</label>
+          </div>
+          <button type="submit" [disabled]="formGroup.invalid" [ngStyle]="{'opacity' : formGroup.invalid ? '0.7' : 1}">Entrar</button>
+          <div class="register">
+            <p>No tens compte <a routerLink="/sign-up">Crear</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
