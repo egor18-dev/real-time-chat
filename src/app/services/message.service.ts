@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthService } from './auth.service';
-import { firstValueFrom } from 'rxjs';
+import { first, firstValueFrom } from 'rxjs';
+import { Message } from '../models/message';
 
 @Injectable({
   providedIn: 'root'
@@ -25,9 +26,14 @@ export class MessageService {
     }
   
   }
+
+  async getMessages () : Promise<any> {
+    try{
+      return await firstValueFrom(this._httpCient.get<Message>(`${this._URL_DIRECTION}/`));
+    }catch(err) {
+      return null;
+    }
+
+  }
 }
 
-interface Message {
-  id ?: string;
-  message: string;
-}
