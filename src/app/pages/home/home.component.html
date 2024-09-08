@@ -1,25 +1,25 @@
-<section class="chat">
-    <div class="content">
-        <div class="phone">
+<main class="d-flex flex-column align-items-center justify-content-center min-vh-100">
+    <div class="row w-100 align-items-center justify-content-center px-3">
+        <div class="col-lg-3 col-md-7 chat p-5">
             <p class="left">
                 Hola que tal
             </p>
             <p class="right">
-                Hola!!!! Bien un poco cansado
+                Muy bien !!!
             </p>
-            <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi corporis, officiis quam fuga totam eveniet fugit unde aperiam quas praesentium sapiente magnam? Alias iusto exercitationem quas ipsam non sapiente!</p>
-            <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi corporis, officiis quam fuga totam eveniet fugit unde aperiam quas praesentium sapiente magnam? Alias iusto exercitationem quas ipsam non sapiente!</p>
-            <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi corporis, officiis quam fuga totam eveniet fugit unde aperiam quas praesentium sapiente magnam? Alias iusto exercitationem quas ipsam non sapiente!</p>
-            <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi corporis, officiis quam fuga totam eveniet fugit unde aperiam quas praesentium sapiente magnam? Alias iusto exercitationem quas ipsam non sapiente!</p>
-            <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi corporis, officiis quam fuga totam eveniet fugit unde aperiam quas praesentium sapiente magnam? Alias iusto exercitationem quas ipsam non sapiente!</p>
-            <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi corporis, officiis quam fuga totam eveniet fugit unde aperiam quas praesentium sapiente magnam? Alias iusto exercitationem quas ipsam non sapiente!</p>
-            <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi corporis, officiis quam fuga totam eveniet fugit unde aperiam quas praesentium sapiente magnam? Alias iusto exercitationem quas ipsam non sapiente!</p>
-            <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi corporis, officiis quam fuga totam eveniet fugit unde aperiam quas praesentium sapiente magnam? Alias iusto exercitationem quas ipsam non sapiente!</p>
-            <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi corporis, officiis quam fuga totam eveniet fugit unde aperiam quas praesentium sapiente magnam? Alias iusto exercitationem quas ipsam non sapiente!</p>
+            <p class="left">
+                Un poco cansado pero bueno, hoy iré al gimnasio.
+            </p>
+            <p class="left">
+                Un poco cansado pero bueno, hoy iré al gimnasio.
+            </p>
         </div>
-        <form>
-            <input type="text" name="" id="">
-            <button>Enviar</button>
-        </form>
     </div>
-</section>
+    <div class="row w-100 align-items-center justify-content-center px-3">
+        <div class="col-lg-3 col-md-7 p-0">
+            <form class="w-100" [formGroup]="myGroup" (ngSubmit)="send(myGroup.value)">
+                <input type="text" formControlName="message" class="form-control">
+            </form>
+        </div>
+    </div>
+</main>

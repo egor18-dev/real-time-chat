@@ -1,7 +1,7 @@
 <section>
     <div class="form-box">
       <div class="form-value">
-        <form [formGroup]="formGroup" (ngSubmit)="createAccount(formGroup.value)">
+        <form [formGroup]="formGroup" (ngSubmit)="createAccount(formGroup.value)" autocomplete="off">
           <h2>Entrar</h2>
           <div class="inputbox">
             <input type="username" id="username" formControlName="username" required>
