@@ -1,8 +1,8 @@
 <main class="d-flex flex-column align-items-center justify-content-center min-vh-100">
     <div class="row w-100 align-items-center justify-content-center px-3">
         <div class="col-lg-3 col-md-7 chat p-5">
-            <ng-container *ngIf="messages">
-                <p *ngFor="let message of messages; index as i">
+            <ng-container *ngIf="messages && userId">
+                <p *ngFor="let message of messages; index as i" [ngClass]="{'right' : userId === message.userId}">
                     {{message.message}}
                 </p>
             </ng-container>

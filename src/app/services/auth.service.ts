@@ -50,6 +50,15 @@ export class AuthService {
     return await firstValueFrom(this._httpClient.get(`${this._URL_DIRECTION}`, {withCredentials: true}));
   }
 
+  async getActualUserId () {
+    try{
+      return await firstValueFrom(this._httpClient.get<any>(`${this._URL_DIRECTION}/actualUser`, {withCredentials: true}))
+    }catch(err){
+      console.log(err);
+      return null;
+    }
+  }
+
 }
 
 interface User {

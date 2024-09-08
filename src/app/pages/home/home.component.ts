@@ -13,7 +13,8 @@ export class HomeComponent implements OnInit{
 
   public myGroup !: FormGroup; 
   public messages : Message [] = [];
-
+  public userId !: string;
+  
   constructor (private _authService : AuthService,
     private _formBuilder : FormBuilder,
     private _messageService : MessageService,
@@ -24,7 +25,17 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit(): void {
+    this.getActualId();
     this.getMessages();
+  }
+
+  async getActualId () {
+    try{
+      const actualId = await this._authService.getActualUserId();
+
+      if(actualId !== null)
+          this.userId = actualId.id;
+    }catch(err) {console.log(err);}
   }
 
   async getMessages () {
